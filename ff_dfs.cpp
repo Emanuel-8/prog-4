@@ -19,7 +19,6 @@ int dfs(int u, int t, int f) {
     return 0;
 }
 
-// Ford-Fulkerson: додава проток додека има augmenting path
 void fordFulkerson(string ime, int V, vector<array<int,3>> edges) {
     n = V;
     memset(cap, 0, sizeof cap);
