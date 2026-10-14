@@ -1,10 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int n, cap[105][105];   // cap[u][v] = преостанат капацитет (residual)
+int n, cap[105][105];   
 bool vis[105];
 
-// бара augmenting path со DFS, враќа bottleneck (0 ако нема пат)
 int dfs(int u, int t, int f) {
     if (u == t) return f;
     vis[u] = true;
@@ -38,7 +37,6 @@ void fordFulkerson(string ime, int V, vector<array<int,3>> edges) {
 }
 
 int main() {
-    // Тест графови од VisuAlgo (s = 0, t = V-1), рабови: {u, v, капацитет}
     fordFulkerson("FF Killer", 4, {
         {0,1,8}, {0,2,8}, {1,3,8}, {2,3,8}, {2,1,1}
     });
